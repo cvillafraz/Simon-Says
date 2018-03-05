@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simon Says</title>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+        <div class="grid position-absolute rounded">
+            <div class="box bg-primary" id="blue"></div>
+            <div class="box bg-danger" id="red"></div>
+            <div class="box bg-success" id="green"></div>
+            <div class="box bg-warning" id="yellow"></div>
+        </div>
+        <div class="simon bg-light position-absolute px-2 text-center">
+            <h1 class="text-secondary">Simon says:</h1>
+        </div>
+        <div class="settings d-flex justify-content-around align-items-center position-absolute w-50">
+            <div class="score bg-info text-center text-white rounded p-1">
+                <span class="lead">Your score: </span>
+                <span class="badge badge-light" id="score">0</span>
+            </div>
+            <button class="start btn btn-success mx-1">Start</button>
+            <button class="strict btn btn-warning">Strict: OFF</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

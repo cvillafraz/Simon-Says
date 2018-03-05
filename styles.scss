@@ -1,0 +1,52 @@
+$border-r:1rem;
+@mixin grid($top,$top-t){
+    top:$top;
+    left: 50%;
+    transform: translate(-50%,$top-t);
+}
+@mixin color(){
+    &:hover,&:active{
+        opacity: .6;
+    }
+}
+.grid{
+    @include grid(50vh,-50%);
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+    z-index: 2;
+    .box{
+        padding: 6.5rem;
+    }
+    .bg-primary{
+        @include color;
+        border-top-left-radius:$border-r;
+    }
+    .bg-danger{
+        @include color;
+        border-top-right-radius: $border-r;
+    }
+    .bg-warning{
+        @include color;
+        border-bottom-right-radius:$border-r; 
+    }
+    .bg-success{
+        @include color;
+        border-bottom-left-radius: $border-r;
+    }
+}
+.simon{
+    @include grid(50vh,-50%);
+    z-index: 3;
+    border-radius: $border-r;
+}
+.settings{
+    @include grid(2vh,-2%);
+    z-index:4;
+}
+@media screen and(max-height:480px){
+          .grid .box{ padding: 4.5rem;}
+}
+@media screen and(max-width:768px){
+          .grid .box{ padding: 4.5rem;}
+}
